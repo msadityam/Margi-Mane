@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #43261a; 
+  color: #0f172a;
+}
+
+/* Optional: smooth UI feel */
+* {
+  box-sizing: border-box;
+}

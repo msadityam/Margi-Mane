@@ -1,0 +1,11 @@
+ALTER TABLE payments
+ADD COLUMN IF NOT EXISTS review_note VARCHAR(300);
+
+ALTER TABLE users 
+ALTER COLUMN updated_at SET DEFAULT NOW();
+
+ALTER TABLE users 
+ALTER COLUMN created_at SET DEFAULT NOW();
+
+ALTER TABLE announcements
+ALTER COLUMN created_at SET DEFAULT NOW();
