@@ -20,7 +20,7 @@ public class AppController {
     public AppController(AppService service) { this.service = service; }
     private com.margimane.model.User me(Principal principal) { return service.me(principal.getName()); }
 
-    @GetMapping("/api/health")
+    @GetMapping("/health")
     public String health() {
         return "OK";
     }
