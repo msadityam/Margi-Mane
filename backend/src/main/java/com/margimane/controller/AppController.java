@@ -20,6 +20,10 @@ public class AppController {
     public AppController(AppService service) { this.service = service; }
     private com.margimane.model.User me(Principal principal) { return service.me(principal.getName()); }
 
+    @GetMapping("/api/health")
+    public String health() {
+        return "OK";
+    }
     @PostMapping("/auth/login")
     public Dtos.AuthResponse login(@Valid @RequestBody Dtos.LoginRequest request) { return service.login(request); }
     @GetMapping("/auth/me")
